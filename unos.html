@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBC News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+
+        <div class="logo">
+            <span>B</span>
+            <span>B</span>
+            <span>C</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="kategorija.php?kategorija=novosti">News</a></li>
+                <li><a href="kategorija.php?kategorija=sport">Sport</a></li>
+                <li><a href="administrator.php">Administracija</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main class="form-container">
+
+    <h1>Unos vijesti</h1>
+
+    <form action="skripta.php" method="POST" enctype="multipart/form-data">
+
+        <div class="form-item">
+            <label for="title">Naslov vijesti</label>
+            <input type="text" name="title" id="title">
+        </div>
+
+        <div class="form-item">
+            <label for="about">Kratki sadržaj vijesti</label>
+            <textarea name="about" id="about" rows="4"></textarea>
+        </div>
+
+        <div class="form-item">
+            <label for="content">Sadržaj vijesti</label>
+            <textarea name="content" id="content" rows="10"></textarea>
+        </div>
+
+        <div class="form-item">
+            <label for="pphoto">Slika:</label>
+            <input type="file" name="pphoto" id="pphoto">
+        </div>
+
+        <div class="form-item">
+            <label for="category">Kategorija:</label>
+            <select name="category" id="category">
+                <option value="novosti">Novosti</option>
+                <option value="sport">Sport</option>
+            </select>
+        </div>
+
+        <div class="form-item">
+            <label>
+                <input type="checkbox" name="archive">
+                Arhiviraj vijest
+            </label>
+        </div>
+
+        <div class="form-buttons">
+            <button type="reset">Poništi</button>
+            <button type="submit">Prihvati</button>
+        </div>
+
+    </form>
+
+</main>
+
+<footer>
+    © 2026 - David Pavić
+</footer>
+
+</body>
+</html>
